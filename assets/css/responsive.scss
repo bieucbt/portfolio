@@ -1,0 +1,138 @@
+@import './color.scss';
+
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 1199px){
+    .container{
+        max-width: 1050px;
+    }
+
+
+}
+
+@media (max-width: 1100px){
+    .container{
+        max-width: 900px;
+    }
+
+    main{
+        .things{
+            .things__content{
+                .thing{
+                    &:nth-child(odd){
+                        .thing-text{
+                            order: initial;
+                        }
+                        .thing-img{
+                            order: initial;
+                            
+                        }
+                    }
+                    .thing-text, .thing-img{
+                        flex-basis: 100%;
+                        padding: 0;
+                    }
+                    .thing-text{
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 950px) {
+    .container{
+        max-width: 750px;
+        padding: 0 30px;
+    }
+
+    header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        backdrop-filter: blur(30px);
+        z-index: 999;
+        .banner-backround{
+            
+        }
+        .content{
+            .header__navbar{
+                display: initial;
+                position: fixed;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                opacity: 0;
+                transform: translateX(-100%);
+                background-color: $bg-hover;
+                text-align: center;
+                padding: 50px;
+                z-index: 1999;
+                &.open{
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                li{
+                    padding: 20px;
+                    a{
+                        color: $bg-btn;
+                    }
+                    button{
+                        &:hover{
+                            background-color: #ffffff;
+                            color: $bg-btn;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+            .icon-menu{
+                display: initial;
+                &.open{
+                    background-color: transparent;
+                    &::after{
+                        transform: rotate(45deg) translate(20px);
+                    }
+                    &::before{
+                        transform: rotate(-45deg) translate(20px);
+                    }
+                }
+            }
+            
+        }
+    }
+
+    main{
+        .banner{
+            .banner-container{
+                justify-content: center;
+                .banner__content{
+                    margin-top: 50px;
+                    flex-basis: 100%;
+                    max-width: 100%;
+                    order: 2;
+                    text-align: center;
+                }
+                .banner__img{
+                    flex-basis: 100%;
+                    max-width: 50%;
+                    order: 1;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

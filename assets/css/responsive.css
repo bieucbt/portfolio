@@ -1,0 +1,102 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    max-width: 1050px;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    max-width: 900px;
+  }
+  main .things .things__content .thing:nth-child(odd) .thing-text {
+    order: initial;
+  }
+  main .things .things__content .thing:nth-child(odd) .thing-img {
+    order: initial;
+  }
+  main .things .things__content .thing .thing-text, main .things .things__content .thing .thing-img {
+    flex-basis: 100%;
+    padding: 0;
+  }
+  main .things .things__content .thing .thing-text {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 950px) {
+  .container {
+    max-width: 750px;
+    padding: 0 30px;
+  }
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+    z-index: 999;
+  }
+  header .content .header__navbar {
+    display: initial;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    background-color: #A4CEC0;
+    text-align: center;
+    padding: 50px;
+    z-index: 1999;
+  }
+  header .content .header__navbar.open {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  header .content .header__navbar li {
+    padding: 20px;
+  }
+  header .content .header__navbar li a {
+    color: #3F3D56;
+  }
+  header .content .header__navbar li button:hover {
+    background-color: #ffffff;
+    color: #3F3D56;
+  }
+  header .content .header__navbar li:hover a {
+    color: #ffffff;
+  }
+  header .content .icon-menu {
+    display: initial;
+  }
+  header .content .icon-menu.open {
+    background-color: transparent;
+  }
+  header .content .icon-menu.open::after {
+    transform: rotate(45deg) translate(20px);
+  }
+  header .content .icon-menu.open::before {
+    transform: rotate(-45deg) translate(20px);
+  }
+  main .banner .banner-container {
+    justify-content: center;
+  }
+  main .banner .banner-container .banner__content {
+    margin-top: 50px;
+    flex-basis: 100%;
+    max-width: 100%;
+    order: 2;
+    text-align: center;
+  }
+  main .banner .banner-container .banner__img {
+    flex-basis: 100%;
+    max-width: 50%;
+    order: 1;
+    position: relative;
+  }
+}/*# sourceMappingURL=responsive.css.map */
