@@ -322,6 +322,9 @@ main .skill .skills-list .item .percent div.css {
 main .skill .skills-list .item .percent div.js {
   width: 15%;
 }
+main .skill .skills-list .item .percent div.react {
+  width: 10%;
+}
 main .work {
   padding-top: 100px;
   position: relative;
