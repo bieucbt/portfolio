@@ -352,10 +352,16 @@ main .work .heading {
   font-size: 30px;
   margin-bottom: 50px;
 }
+
+main .list-work{
+  gap: 2rem;
+  flex: wrap;
+}
+
 main .work .list-work .item {
   border-radius: 20px;
+  width: calc(100% / 4);
   position: relative;
-  flex-basis: 25%;
   overflow: hidden;
   cursor: pointer;
 }
@@ -364,6 +370,7 @@ main .work .list-work .item:hover .link-work {
 }
 main .work .list-work .item img {
   align-items: center;
+  object-fit: cover;
   height: 100%;
 }
 main .work .list-work .item .link-work {

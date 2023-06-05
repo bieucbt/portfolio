@@ -25,7 +25,9 @@
   main .things .things__content .thing .thing-text {
     margin-bottom: 50px;
   }
+  
 }
+
 @media (max-width: 950px) {
   .container {
     max-width: 750px;
@@ -99,4 +101,19 @@
     order: 1;
     position: relative;
   }
+  main .work .list-work{
+    justify-content: center;
+  }
+  main .work .list-work .item{
+    flex-basis: calc(50% - 5%);
+    max-width: calc(50% - 5%);
+  }
+  
 }/*# sourceMappingURL=responsive.css.map */
+
+@media (max-width: 768px){
+  main .work .list-work .item{
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
